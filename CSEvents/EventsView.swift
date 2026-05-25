@@ -2,7 +2,7 @@
 //  EventsView.swift
 //  CSEvents
 //
-//  Created by Archita Nemalikanti on 5/21/26.
+//  Created by Archita Nemalikanti on 5/25/26.
 //
 
 import SwiftUI
@@ -233,7 +233,7 @@ struct EventsView: View {
 
         return "\(dayName.string(from: start)) \(ordinalDay), \(time.string(from: start)) - \(time.string(from: end)) \(tz.string(from: start))"
     }
-    
+
 }
 
 #Preview {

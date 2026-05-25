@@ -11,7 +11,7 @@ import SwiftUI
 struct CSEventsApp: App {
     var body: some Scene {
         WindowGroup {
-            EventsView()
+            CSEventsView()
         }
     }
 }
