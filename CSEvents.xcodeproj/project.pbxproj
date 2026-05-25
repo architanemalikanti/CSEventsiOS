@@ -8,11 +8,26 @@
 
 /* Begin PBXFileReference section */
 		89BEB65C2FBFD3D0005B81C0 /* CSEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89BEBA312FBFE8B4005B81C0 /* DMSans-Italic-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DMSans-Italic-VariableFont_opsz,wght.ttf"; path = "CSEvents/Cardo,DM_Sans,League_Script,Libre_Bodoni (2)/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; };
+		89BEBA322FBFE8B4005B81C0 /* DMSans-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DMSans-VariableFont_opsz,wght.ttf"; path = "CSEvents/Cardo,DM_Sans,League_Script,Libre_Bodoni (2)/DM_Sans/DMSans-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		89BEB66A2FBFD3D2005B81C0 /* Exceptions for "CSEvents" folder in "CSEvents" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 89BEB65B2FBFD3D0005B81C0 /* CSEvents */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		89BEB65E2FBFD3D0005B81C0 /* CSEvents */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				89BEB66A2FBFD3D2005B81C0 /* Exceptions for "CSEvents" folder in "CSEvents" target */,
+			);
 			path = CSEvents;
 			sourceTree = "<group>";
 		};
@@ -32,6 +47,8 @@
 		89BEB6532FBFD3D0005B81C0 = {
 			isa = PBXGroup;
 			children = (
+				89BEBA312FBFE8B4005B81C0 /* DMSans-Italic-VariableFont_opsz,wght.ttf */,
+				89BEBA322FBFE8B4005B81C0 /* DMSans-VariableFont_opsz,wght.ttf */,
 				89BEB65E2FBFD3D0005B81C0 /* CSEvents */,
 				89BEB65D2FBFD3D0005B81C0 /* Products */,
 			);
@@ -255,12 +272,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FRR7RJ635S;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = CSEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,12 +299,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FRR7RJ635S;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = CSEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
