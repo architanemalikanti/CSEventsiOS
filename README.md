@@ -1,6 +1,6 @@
 # cs events @ cornell 🎉
 
-your one place for all cornell CS opportunities — built in SwiftUI.
+your one place for all cornell CS opportunities.
 
 ---
 
