@@ -10,7 +10,7 @@ import Foundation
 /*
  Just any regular event that a club may host.
  */
-struct Event {
+struct Event: Codable {
     /*
      The club that's hosting this event.
      */

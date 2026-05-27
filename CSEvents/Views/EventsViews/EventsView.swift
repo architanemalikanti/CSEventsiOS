@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct EventsView: View {
+    
     var user: User
+    
     var body: some View {
         ZStack{
             //Background Color

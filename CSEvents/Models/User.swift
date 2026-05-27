@@ -9,9 +9,9 @@ import Foundation
 
 
 /*
- A struct to represent a basic user of this app.
+ A struct to represent a basic user of this app. Conforms to Codable.
  */
-struct User {
+struct User: Codable {
     /*
      The name of the user.
      */
