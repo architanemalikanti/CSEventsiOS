@@ -91,10 +91,15 @@ struct EventsView: View {
 
     func displayEvents() -> some View {
         VStack(spacing: 5) {
-            ForEach(user.eventsAttending, id: \.title) { event in
-                EventCardView(event: event)
+            ForEach(user.eventsAttending) { event in
+                
+                NavigationLink(value: event){
+                    //the "sensor" that senses when this event card is clicked.
+                    EventCardView(event: event)
+                }
+                
+                
             }
         }
-        
     }
 }

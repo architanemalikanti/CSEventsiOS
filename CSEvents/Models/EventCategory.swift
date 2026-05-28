@@ -5,7 +5,7 @@
 //  Created by Archita Nemalikanti on 5/25/26.
 //
 
-enum EventCategory: CaseIterable, Codable {
+enum EventCategory: CaseIterable, Codable, Hashable {
     case companyVisit
     case startups
     case famousSpeakers

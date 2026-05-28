@@ -24,10 +24,18 @@ struct CSEventsView: View {
 
     var body: some View {
         TabView {
-            EventsView(user: user)
-                .tabItem {
-                    Label("Events", systemImage: "calendar")
-                }
+            
+            NavigationStack{
+                EventsView(user: user)
+                    .navigationDestination(for: Event.self){ event in
+                        EventDetailView(event: event)
+                    }
+            }
+            .tabItem {
+                Label("Events", systemImage: "calendar")
+            }
+            
+            
             EventsAttendingView(user: user)
                 .tabItem {
                     Label("Going", systemImage: "briefcase")

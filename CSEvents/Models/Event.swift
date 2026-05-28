@@ -10,7 +10,13 @@ import Foundation
 /*
  Just any regular event that a club may host.
  */
-struct Event: Codable {
+struct Event: Codable, Hashable, Identifiable {
+    
+    /*
+     The unique id to represent this user.
+     */
+    var id: UUID = UUID()
+    
     /*
      The club that's hosting this event.
      */

@@ -6,7 +6,7 @@
 //
 
 
-struct Club: Codable {
+struct Club: Codable, Hashable {
     /*
      The name of this club.
      */
