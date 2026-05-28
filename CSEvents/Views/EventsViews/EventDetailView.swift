@@ -37,6 +37,60 @@ struct EventDetailView: View {
             .padding(20)
             .padding(.bottom, 8)
         }
+        
+        VStack(alignment: .leading, spacing: 22) {
+            HStack(spacing: 10) {
+                ZStack {
+                    Circle()
+                        .frame(width: 36, height: 36)
+                    // First letter of the host club's name
+                    Text(String(event.host.name.prefix(1)))
+                }
+                VStack(alignment: .leading, spacing: 1) {
+                    Text(event.host.name)
+                        .foregroundColor(.primary)
+                    Text("View club page")
+                        .foregroundColor(.purple)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundColor(.secondary)
+            }
+            .buttonStyle(.plain)
 
+            Divider()
+
+            VStack(alignment: .leading, spacing: 12) {
+                // Add event details here as needed
+            }
+
+            Divider()
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Hi")
+            }
+
+            Divider()
+
+            HStack(spacing: 6) {
+                Image(systemName: "person.2.fill")
+                    .foregroundColor(.purple)
+                Text("Hi")
+            }
+
+            Button {
+                // Action here
+            } label: {
+                HStack(spacing: 8) {
+                    Text("Hi")
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
+                .clipShape(RoundedRectangle(cornerRadius: 14))
+                //.animation(.spring(response: 0.3), value: currentEvent.isRSVPed)
+            }
+        }
+        .padding(20)
     }
 }
