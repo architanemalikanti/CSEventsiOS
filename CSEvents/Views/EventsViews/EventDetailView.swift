@@ -50,9 +50,13 @@ struct EventDetailView: View {
                         HStack(spacing: 10) {
                             ZStack {
                                 Circle()
+                                    .fill(Color.purple.opacity(0.3))
                                     .frame(width: 36, height: 36)
-                                // First letter of the host club's name
-                                Text(String(event.host.name.prefix(1)))
+                                
+                                //first letter of the second word of the host club's name, as the logo
+                                Text(String(event.host.name.split(separator: " ").dropFirst().first?.prefix(1) ?? "?"))
+                                    .foregroundColor(.white)
+                                    .font(.custom("DMSans-Bold", size: 16))
                             }
                             VStack(alignment: .leading, spacing: 1) {
                                 Text(event.host.name)
