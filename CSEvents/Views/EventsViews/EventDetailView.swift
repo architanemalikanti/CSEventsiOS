@@ -28,13 +28,13 @@ struct EventDetailView: View {
                     VStack(alignment: .leading, spacing: 6) {
                         HStack(spacing: 5) {
                             Text(event.category.displayName)
-                                .font(.custom("DMSans-Thin", size: 16))
+                                .font(.custom("DMSans-Regular", size: 12))
                                 .foregroundColor(.white.opacity(0.8))
                         }
                         .padding(.horizontal, 10).padding(.vertical, 5)
-                        .background(.white.opacity(0.2))
+                        .glassEffect(.regular.interactive().tint(.purple.opacity(0.8)), in: Capsule())
                         .foregroundColor(.white)
-                        .clipShape(Capsule())
+                        
 
                         Text(event.title)
                             .font(.custom("DMSans-Regular", size: 30))
@@ -56,10 +56,11 @@ struct EventDetailView: View {
                             }
                             VStack(alignment: .leading, spacing: 1) {
                                 Text(event.host.name)
-                                    .font(.custom("DMSans-Regular", size: 15))
+                                    .font(.custom("DMSans-Bold", size: 15))
                                     .foregroundColor(.white.opacity(0.8))
                                 Text("View club page")
                                     .foregroundColor(.purple)
+                                    .font(.custom("DMSans-Thin", size: 13))
                             }
                             Spacer()
                             Image(systemName: "chevron.right")
