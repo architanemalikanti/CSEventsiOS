@@ -9,6 +9,16 @@ import SwiftUI
 
 struct EventDetailView: View {
     var event: Event
+
+    private func formattedStart(_ date: Date) -> String {
+        let dayPart = date.formatted(.dateTime.weekday(.wide).month(.wide).day())
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "h:mma"
+        timeFormatter.amSymbol = "am"
+        timeFormatter.pmSymbol = "pm"
+        return "\(dayPart) • \(timeFormatter.string(from: date))"
+    }
+
     var body: some View {
         
         ScrollView{
@@ -76,13 +86,27 @@ struct EventDetailView: View {
                         Divider()
 
                         VStack(alignment: .leading, spacing: 12) {
-                            // Add event details here as needed
+                            // calendar symbol, then the date right next to it.
+                            HStack {
+                                Image(systemName: "calendar")
+                                Text(formattedStart(event.startTime))
+                                    .font(.custom("DMSans-Thin", size: 14))
+                            }
+                            // location symbol, then the location right next to it.
+                            HStack {
+                                Image(systemName: "mappin.and.ellipse")
+                                Text(event.location)
+                                    .font(.custom("DMSans-Thin", size: 14))
+                            }
                         }
 
                         Divider()
 
                         VStack(alignment: .leading, spacing: 8) {
-                            Text("Hi")
+                            Text("About")
+                                .font(.custom("DMSans-Bold", size: 16))
+                            Text(event.description)
+                                .font(.custom("DMSans-Thin", size: 14))
                         }
 
                         Divider()
@@ -90,7 +114,8 @@ struct EventDetailView: View {
                         HStack(spacing: 6) {
                             Image(systemName: "person.2.fill")
                                 .foregroundColor(.purple)
-                            Text("Hi")
+                            Text("\(event.numberAttendees) people are going")
+                                .font(.custom("DMSans-Bold", size: 14))
                         }
 
                         Button {
