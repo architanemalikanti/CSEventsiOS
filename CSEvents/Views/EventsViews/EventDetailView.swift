@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EventDetailView: View {
     var event: Event
+    var isRSVPd: Bool
 
     private func formattedStart(_ date: Date) -> String {
         let dayPart = date.formatted(.dateTime.weekday(.wide).month(.wide).day())
@@ -122,12 +123,17 @@ struct EventDetailView: View {
                             // Action here
                         } label: {
                             HStack(spacing: 8) {
-                                Text("Hi")
+                                if(isRSVPd){
+                                    Text("You're Going!")
+                                }else{
+                                    Text("RSVP to Attend")
+                                }
+        
                             }
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .clipShape(RoundedRectangle(cornerRadius: 14))
-                            //.animation(.spring(response: 0.3), value: currentEvent.isRSVPed)
+                            //.animation(.spring(response: 0.3), value: currentEvent.isRSVPd)
                         }
                     }
                     .padding(20)
